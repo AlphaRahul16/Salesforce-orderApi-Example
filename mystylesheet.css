@@ -1,0 +1,165 @@
+
+html {
+  box-sizing: border-box;
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #000303;
+  background-color: #f17d39;
+  max-width: 30em;
+  margin: 3em auto;
+}
+
+.field + .field {
+  margin-top: 0.75em;
+}
+
+.field {
+  position: relative;
+  border: none;
+}
+
+label {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #000303;
+}
+
+input ~ label {
+  position: absolute;
+  top: -3em;
+  display: block;
+  border-radius: 3px;
+  padding: 0.5em;
+  font-size: 0.625em;
+  color: #F3F3F3;
+  background-color: #27313C;
+  pointer-events: none;
+  text-transform: initial;
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease 0;
+  transition: opacity 0.25s ease 0;
+}
+input ~ label::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #27313C;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 1;
+  bottom: -5px;
+  left: 10px;
+}
+
+label ~ textarea{
+  position: relative;
+  -webkit-appearance: none;
+  height: 9.5em;
+  width: 36.5em;
+  border-radius: 0.5em;
+  background-color: #E2E5E5;
+  border-color: transparent;
+  background-clip: padding-box;
+  color: #00GG33;
+  vertical-align: middle;
+}
+
+.text-box {
+ border: solid 1px black;
+ min-width:100px;
+ padding: 5px;
+ display: inline-block;
+ background-color: #E2E5E5;
+  border-radius: 0.3em;
+    border-color: transparent;
+  background-clip: padding-box;
+ padding: 0.75em;
+ font-size: inherit;
+ width: 100%;
+ font-family: "Montserrat", helvetica, arial, sans-serif;
+
+}
+
+.text-box:focus{
+   border-color: #919FAF;
+  background-color: #919FAF;
+}
+
+input:focus ~ label {
+  opacity: 0.8;
+  -webkit-transition: opacity 0.5s ease 1s;
+  transition: opacity 0.5s ease 1s;
+}
+
+input, button {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 0.75em;
+  font-size: inherit;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  background-color: #E2E5E5;
+  border: 2px solid #E2E5E5;
+}
+input:focus, button:focus {
+  border-color: #919FAF;
+  background-color: #919FAF;
+}
+
+
+::-webkit-input-placeholder {
+  font-size: 0.73em;
+  color: #636260;
+  font-weight: bold;
+}
+
+
+button:focus, input:focus {
+  position: relative;
+  outline: none;
+  color: white;
+}
+
+input[type="submit"], button {
+  display: inline-block;
+  width: auto;
+  font-size: 0.875em;
+  padding: 0.7142857143em 2.2857142857em;
+  margin: 0.2857142857em 0;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  background-color: #83da55;
+  border: 2px solid #83da55;
+  text-transform: uppercase;
+}
+input[type="submit"]::before, input[type="submit"]::after, button::before, button::after {
+  font-family: "Ionicons";
+  content: "";
+  margin: 0 0.25em;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+input[type="submit"]::after, button::after {
+  content: "";
+}
+input[type="submit"]:focus, button:focus {
+  border-color: #2392a3;
+  background-color: #2392a3;
+}
+input[type="submit"]:focus::after, input[type="submit"]:focus::before, button:focus::after, button:focus::before {
+  opacity: 1;
+}
+.success-msg {
+  color: #270;
+  font-size: 1.54em;
+
+  background-color: #DFF2BF;
+}
+
